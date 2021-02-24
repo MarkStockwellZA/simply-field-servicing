@@ -27,5 +27,13 @@ namespace SimplyFieldServicing.Controllers
             var bookings = _context.Bookings.ToList();
             return bookings;
         }
+
+        [HttpPost]
+        public IActionResult Post([FromBody] Booking booking)
+        {
+            _context.Bookings.Add(booking);
+            _context.SaveChanges();
+            return Ok();
+        }
     }
 }

@@ -13,5 +13,6 @@ namespace SimplyFieldServicing.Models
         public string BookingAddress { get; set; }
 
         public string BookingDescription { get; set; }
+        public int? AssignedTo { get; set; }
     }
 }
